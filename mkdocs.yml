@@ -1,0 +1,81 @@
+site_name: Manohar's Ideas
+site_url: https://my-docs.com
+site_author: Manohar Gupta
+site_description: >-
+  Place for me to share my ideas with the world.
+
+
+theme:
+  name: material
+  #nav_bar_title: Manohar's Ideas
+  #nav_bar_icon: fontawesome/solid/brain
+  
+  features:
+  - navigation.footer
+  #- navigation.top
+  #- navigation.tabs
+  #- navigation.expand
+#  - navigation.sticky
+ # - navigation.tracking
+ 
+
+  font:
+    text: Merriweather Sans
+    code: Merriweather
+  icon:
+    repo: fontawesome/brands/github
+    edit: fontawesome/solid/pen-to-square
+
+  palette:
+  # Dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: light blue
+      accent: cyan
+  # Light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+      primary: blue
+      accent: teal
+
+  #custom_dir: material
+
+markdown_extensions:
+  - pymdownx.superfences # for code blocks
+  - pymdownx.caret # for caret
+  - pymdownx.keys # for keys
+  - pymdownx.mark # for mark
+  - pymdownx.tilde # for tilde
+  - pymdownx.snippets # for snippets
+  - pymdownx.inlinehilite # for inlinehilite
+  - pymdownx.critic # for critic
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true # for critic
+  
+  - admonition
+  - pymdownx.details
+
+
+
+extra:
+
+    social:
+      - icon: fontawesome/brands/linkedin
+        link: https://www.linkedin.com/in/manoharg/
+      - icon: fontawesome/brands/github
+        link: https://github.com/manohar6839
+      - icon: fontawesome/brands/twitter
+        link: https://twitter.com/manohargupta
+      - icon: fontawesome/brands/instagram
+        link: https://www.instagram.com/manohargupta/
+      - icon: fontawesome/brands/facebook
+        link: https://www.facebook.com/manohargupta/
+      - icon: fontawesome/brands/youtube
+        link: https://www.youtube.com/manohargupta/
+
+copyright: Copyright © Manohar Gupta 2025

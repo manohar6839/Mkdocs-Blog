@@ -1,0 +1,34 @@
+# This is a workflow for CI
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+    contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: configure Git Credentials
+        run: |
+          git config -- user.name github-actions
+          git config --global user.email "manohar6839@gmail.com"
+      - uses: actions/setup-python@v3
+        with:
+          python-version: 3.10
+      - run: echo "cache_id=$(date --utc +%s)" >> $GITHUB_OUTPUT
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ runner.os }}-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+            
+      - run: pip install mkdocs-material
+      - run: mkdocs gh-deploy --force
